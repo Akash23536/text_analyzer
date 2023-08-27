@@ -1,30 +1,35 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { Link } from 'react-router-dom'
-
-
 
 export default function Navbar(props) {
+  let headingcolor = {
+    color: '	#06b6d4',
+    fontWeight: '500',
+    fontSize: '22px'
+  }
+
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-body-${props.mode}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">{props.title}</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Home</a>
-            </li>
-            {/* <li className="nav-item">
-              <a className="nav-link" to="/about">About</a>
-            </li> */}
-          </ul>
-          <div className={`form-check form-switch  text-${props.mode === 'light' ? 'dark' : 'light'} `}>
-            <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
+        <a className="navbar-brand" style={headingcolor} href="/">{props.title}</a>
+
+        <div>
+          <button
+            className="navbar-toggler"
+            type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarSupportedContent" align="right">
+            <div className={`form-check form-switch  text-${props.mode === 'light' ? 'dark' : 'light'} `}>
+              <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
+            </div>
           </div>
         </div>
       </div>
@@ -32,17 +37,19 @@ export default function Navbar(props) {
   )
 }
 
-// setting the default value to the props if the value is not set then 
-// default value is exicuted
-Navbar.defaultProps = {                                        
-  title: "Set title here"
-}
+
+
 
 // never make the (p) uppercase in this ->  Navbar.propTypes ={}
 //import PropTypes from 'prop-types' -> to use this 
 // when we set any prop diff from the set data_types it show -> error 
 // in this case the datatype of prop is -> string
- //.isRequired -> give the error in the console  if the thier is no set value of props
+//.isRequired -> give the error in the console  if the thier is no set value of props
 Navbar.propTypes = {
-  title: PropTypes.string.isRequired}
+  title: PropTypes.string.isRequired
+}
+/* here we pass default values into it from props */
+Navbar.defaultProps = {
+  title: "Text-Analyzer",
+};
 

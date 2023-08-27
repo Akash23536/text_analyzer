@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 
+
 function App() {
 
 const [mode, setMode] = useState('light');
@@ -51,9 +52,9 @@ setTimeout(() => {
 
       <Alert  alert = {alert}/>
       <div className="container my-2">
-          <TextForm  showAlert= {showAlert} Heading="Try Text Analyzer - Word counter, Character counter, Remove extra spaces" mode={mode} />
+          <TextForm  showAlert= {showAlert} Heading="Text Analyzer - Word counter, Character counter, Remove extra spaces" mode={mode} />
       </div>
-
+      
     </>
   );
 }
