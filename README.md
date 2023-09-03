@@ -1,7 +1,7 @@
 ## A utility application that provides users to modifyits text 
 
 ## Text Analyzer
-Text Analyzer App Made Using React.js . it is autility app that allow user to
+Text Analyzer App Made Using React.js . it is a utility app that allow user to
 modify it text to lowercase, uppercase, remove extra spaces, copy to clipboard
 count the total no of character present in the word or line
 time required to read the total line
