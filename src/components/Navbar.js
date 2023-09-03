@@ -10,10 +10,9 @@ export default function Navbar(props) {
   }
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-body-${props.mode}`}>
+    <nav className={` navbar-brand mx-1  navbar navbar-expand-lg navbar-${props.mode} bg-body-${props.mode} `}>
       <div className="container-fluid">
-        <a className="navbar-brand" style={headingcolor} href="/">{props.title}</a>
-
+        <a className="navbar-brand" style={headingcolor} href="/">{props.title} <iconify-icon icon="pajamas:pencil-square"></iconify-icon> </a>
         <div>
           <button
             className="navbar-toggler"
@@ -24,11 +23,10 @@ export default function Navbar(props) {
             aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-
           <div className="collapse navbar-collapse" id="navbarSupportedContent" align="right">
             <div className={`form-check form-switch  text-${props.mode === 'light' ? 'dark' : 'light'} `}>
               <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode <iconify-icon icon="line-md:moon-loop"></iconify-icon></label>
             </div>
           </div>
         </div>

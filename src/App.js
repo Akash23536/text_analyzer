@@ -45,18 +45,14 @@ setTimeout(() => {
       // document.title ="TextUtils - Light Mode";                           // in google tabs to set title of app when Lightmode is activated
     }
   }
-
   return (
     <>
       <Navbar title="Text Analyzer" mode={mode} toggleMode={toggleMode} />
-
       <Alert  alert = {alert}/>
       <div className="container my-2">
           <TextForm  showAlert= {showAlert} Heading="Text Analyzer - Word counter, Character counter, Remove extra spaces" mode={mode} />
       </div>
-      
     </>
   );
 }
-
 export default App;
