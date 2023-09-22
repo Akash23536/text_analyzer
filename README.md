@@ -22,8 +22,6 @@ follow these steps:
 4. Text Analyzer is now running on localhost/3000
 
 
-## You can see the deployed App - (https://akash23536.github.io/text_analyzer/)
-
 ## Tech Stack Used
 
 React.js, Bootstrap, javaScript, Html, Css, npm-package manager
