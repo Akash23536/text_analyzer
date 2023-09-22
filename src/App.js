@@ -54,3 +54,10 @@ setTimeout(() => {
   );
 }
 export default App;
+
+
+// in package.json
+// "homepage": "https://Akash23536.github.io/text_analyzer",
+// script tag ma 
+// "predeploy": "npm run build",
+    // "deploy": "gh-pages -d build",
